@@ -32,6 +32,7 @@ public class SearchSupport {
     public static JSONObject getSearchResults(String clue, String role) {
         JSONArray resultArray = new JSONArray();
         if (role.equals("registered")) {
+            System.out.println("Got IN");
             LinkedList<JSONObject> people = peopleSearch(clue);
             while (resultArray.size() < resultCount & people.size() > 0) {
                 resultArray.add(people.pollFirst());
